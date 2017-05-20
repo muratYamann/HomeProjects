@@ -6,8 +6,8 @@ package com.dwderylmz.home.model;
 
 public class HomeItems {
 
-
     String ev_id;
+    String ev_il;
     String ev_emlak_tip;
     String ev_alan;
     String ev_bina_yasi;
@@ -15,7 +15,27 @@ public class HomeItems {
     String ev_bul_kat;
     String ev_fiyat;
     String ev_aciklama;
-    String ev_resimler;
+    String ev_resim_yolu;
+
+
+    public  HomeItems(String ev_id,String ev_il,String ev_emlak_tip,String ev_alan,String ev_bina_yasi,String ev_oda_sayisi,String ev_bul_kat,String ev_fiyat,String ev_aciklama, String ev_resim_yolu){
+        this.ev_id = ev_id;
+        this.ev_il = ev_il;
+        this.ev_emlak_tip = ev_emlak_tip;
+        this.ev_alan= ev_alan;
+        this.ev_bina_yasi= ev_bina_yasi;
+        this.ev_oda_sayisi=ev_oda_sayisi;
+        this.ev_bul_kat=ev_bul_kat;
+        this.ev_fiyat=ev_fiyat;
+        this.ev_aciklama=ev_aciklama;
+        this.ev_resim_yolu=ev_resim_yolu;
+
+    }
+
+
+
+
+
 
     public String getEv_id() {
         return ev_id;
@@ -23,6 +43,14 @@ public class HomeItems {
 
     public void setEv_id(String ev_id) {
         this.ev_id = ev_id;
+    }
+
+    public String getEv_il() {
+        return ev_il;
+    }
+
+    public void setEv_il(String ev_il) {
+        this.ev_il = ev_il;
     }
 
     public String getEv_emlak_tip() {
@@ -81,11 +109,11 @@ public class HomeItems {
         this.ev_aciklama = ev_aciklama;
     }
 
-    public String getEv_resimler() {
-        return ev_resimler;
+    public String getEv_resim_yolu() {
+        return ev_resim_yolu;
     }
 
-    public void setEv_resimler(String ev_resimler) {
-        this.ev_resimler = ev_resimler;
+    public void setEv_resim_yolu(String ev_resimler) {
+        this.ev_resim_yolu = ev_resimler;
     }
 }

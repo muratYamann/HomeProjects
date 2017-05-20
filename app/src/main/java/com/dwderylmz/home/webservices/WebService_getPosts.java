@@ -6,7 +6,6 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.dwderylmz.home.util.JSONParser;
-import com.dwderylmz.home.model.HomeItem;
 
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
@@ -18,7 +17,7 @@ import java.util.List;
 
 /**
  * Created by macbookpro on 17.05.2017.
- */
+
 
 class WebService_getPosts extends AsyncTask<String ,String,String> {
 
@@ -29,7 +28,7 @@ class WebService_getPosts extends AsyncTask<String ,String,String> {
     public static final String ERR_MESSAGE = "error_message";
 
 
-    ArrayList<HomeItem> sharedList;
+    ArrayList<HomeItems> sharedList;
     Context ctx;
     private String TAG = "background";
     private List<NameValuePair> nameValuePair;
@@ -82,7 +81,7 @@ class WebService_getPosts extends AsyncTask<String ,String,String> {
 
                 Log.d(TAG, "ws do: 4");
                 jsonArrayPosts = jsonobject.getJSONArray(TAG_RESPONSE);
-                sharedList = new ArrayList<HomeItem>();
+                sharedList = new ArrayList<HomeItems>();
 
                 for (int i = 0; i < jsonArrayPosts.length(); i++) {
 
@@ -145,3 +144,4 @@ class WebService_getPosts extends AsyncTask<String ,String,String> {
     }
 }
 
+ */

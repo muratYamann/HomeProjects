@@ -31,6 +31,7 @@ public class JSONParser {
     static JSONObject jObj = null;
     static JSONArray jarray = null;
     static String json = "";
+    static JSONArray jarry= null;
 
     // constructor
     public JSONParser() {
@@ -39,7 +40,7 @@ public class JSONParser {
 
     // function get json from url
     // by making HTTP POST or GET mehtod
-    public static JSONObject makeHttpRequest(String loginUrl, String method) {
+    public static String makeHttpRequest(String loginUrl, String method) {
         // making HTTP Request
         try {
             // check for request method
@@ -92,12 +93,17 @@ public class JSONParser {
         // try parse the string to JSON Object
         try {
             jObj = new JSONObject(json);
+            jarry = new JSONArray(json);
         } catch (JSONException e) {
             Log.e("JSON Parser", "Error Parsing data" + e.toString());
         }
 
+        Log.d(TAG, "makeHttpRequest: json sonn"+json);
+
+        Log.d(TAG, "makeHttpRequest: json sonn JObj"+jObj);
+        Log.d(TAG, "makeHttpRequest: json sonn"+jarry);
         // return JSON String
-        return jObj;
+        return json;
     }
 
 

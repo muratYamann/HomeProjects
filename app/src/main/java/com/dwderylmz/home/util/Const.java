@@ -8,5 +8,7 @@ public class Const {
 
     public static String ulrLocal ="http://192.168.1.34:8080/home_info";
 
+    public static String ulrLocalHomeGet ="http://192.168.1.34:8080/home_get?ev_id=";
+
 
 }
